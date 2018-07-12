@@ -13,7 +13,7 @@ MongoClient.connect(
   { useNewUrlParser: true },
   (err, database) => {
     if (err) return console.log(err);
-    require("./app/routes")(app, database.db("test_db"));
+    require("./app/routes")(app, database.db("<DATABASE_NAME>"));
     app.listen(port, () => {
       console.log("We are live on " + port);
     });
